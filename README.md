@@ -9,3 +9,6 @@ Course assignments for CSCI571 in USC, 2018 spring
 |      [6](./hw6/HW6_Description.pdf)      | Travel and Entertainment Search Server-side Scripting (PHP) |
 |      [8](./hw8/HW8_Description.pdf)      |  Ajax, JSON and Responsive Design - Travel and Entertainment Search (Bootstrap/Angular/AJAX/JSON/jQuery/Cloud Exercise) |
 |      [9](./hw9/HW9_Description_Android.pdf) | Place Search Android App |
+
+Link for HW8:
+[http://csci571-hw8.us-west-1.elasticbeanstalk.com/]
