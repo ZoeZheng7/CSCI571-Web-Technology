@@ -3,7 +3,7 @@ Course assignments for CSCI571 in USC, 2018 spring
 
 | HW | Topic |
 | ----------- | ----- |
-|      [2](ZoeZheng7/CSCI571-Web-Technology/hw2/HW2_Description.pdf)      | Course Homework Page (HTML) |
+|      [2](~/CSCI571-Web-Technology/hw2/HW2_Description.pdf)      | Course Homework Page (HTML) |
 |      [3](CSCI571-Web-Technology/hw3/HW3_Description.pdf)      | HTML and CSS Exercise |
 |      3      | LSH & Movie Recommendation System | Python, Scala |
 |      4      | Social Network Analysis | Python, Scala |
