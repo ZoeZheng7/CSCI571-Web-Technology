@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Homework 4</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      #enter {
+        padding-top: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="enter">Enter URL for Trucking List JSON File</h2>
+    <p><input id="list"></p>
+    <button id="submit" onclick="pop()">Submit Query</button>
+
+    <script>
+      function pop() {
+        var name = document.getElementById("list").value;
+        if (name === "") {
+          alert("Please input the file name");
+        }
+        else {
+            readFile(name, function(response) {
+            content = JSON.parse(response);
+            if (content.Mainline.Table.Row == null) {
+               alert("No trucking company entries!");
+             }
+             else {
+              openWin(content);
+             }
+          });
+        }
+      }
+
+      function readFile(name, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.overrideMimeType("application/json");
+        xhr.open("GET", name, true);
+        xhr.onreadystatechange = function() {
+          console.log("found1");
+          if ((xhr.status == "0"||xhr.status == "404") && xhr.readyState === 4) { //File not found
+            alert("We couldn't find this file!");
+          }
+          else if (xhr.readyState === 4 && xhr.status == "200") {
+            callback(xhr.responseText);
+          }
+        }
+        xhr.send(null);
+      }
+
+      function openWin(content) {
+        console.log("found2");
+        var myWin = window.open("hw4.html");
+        myWin.document.write("<td style = \"text-align: center;\">");
+        myWin.document.write("<table style = \"width:100%; border: 1px solid black;\">");
+        var header = content.Mainline.Table.Header.Data;
+        myWin.document.write("<tr>");
+        for (var e of header) {
+          myWin.document.write("<td style = \"border: 1px solid black; border-collapse: collapse; text-align: center;\">"+e+"</td>");
+        }
+        myWin.document.write("</tr>");
+        var row = content.Mainline.Table.Row;
+        if (row != null) {
+          for (var com of row) {
+            myWin.document.write("<tr>");
+            for (var col in com) {
+              if (col == "Hubs") { //"Hubs"
+                var i = 0;
+                myWin.document.write("<td style = \"border: 1px solid black; border-collapse: collapse;\">");
+                myWin.document.write("<ul>");
+                for (var hub in com[col]["Hub"]) {
+                  i++;
+                  myWin.document.write("<li>");
+                  if (i == 1) {
+                    myWin.document.write("<b>"+com[col]["Hub"][hub]+"</b>");
+                  }
+                  else {
+                    myWin.document.write(com[col]["Hub"][hub]);
+                  }
+                  myWin.document.write("</li>");
+                }
+                myWin.document.write("</ul>");
+                myWin.document.write("</td>");
+              }
+              else if (col == "HomePage") {
+                myWin.document.write("<td style = \"border: 1px solid black; border-collapse: collapse; text-align: center;\"><a href="+com[col]+">"+com[col]+"</a></td>");
+              }
+              else if (col == "Logo") {
+                myWin.document.write("<td style = \"border: 1px solid black; border-collapse: collapse; text-align: center;\"><img src="+com[col]+" alt=\"logo_pic\" width=200px></td>");
+              }
+              else if (col == "Company" || col == "Services" || col == "Revenue"){
+                myWin.document.write("<td style = \"border: 1px solid black; border-collapse: collapse;\">"+com[col]+"</td>");
+              }
+            }
+            myWin.document.write("</tr>");
+          }
+        }
+        else {
+          alert("No trucking company!");
+        }
+        myWin.document.close();
+      }
+
+    </script>
+  </body>
+</html>

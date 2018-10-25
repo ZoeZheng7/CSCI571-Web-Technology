@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>mysite</title>
+    <style>
+    body {
+      height: 100%;
+      width: 100%; 
+      margin: 0;
+    }
+    #bgimg1 {
+      background-image: url(http://cs-server.usc.edu:45678/hw/hw3/images/image6.jpg);
+      min-height: 650px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: -350px 40px;
+      background-size: 1907px;
+      width: 1192px;
+    }
+    #bgimg2 {
+      background-image: url(http://cs-server.usc.edu:45678/hw/hw3/images/image5.jpg);
+      min-height: 480px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: 0;
+      width: 1192px;
+      background-size: 1192px;
+    }
+    #before {
+      padding: 0;
+      margin: 0;
+      width: 1192px;
+      background-color: white;
+    }
+    #header {
+      height: 170px;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'Helvetica Neue', serif;
+      font-size: 55px;
+      font-weight: 400;
+      color: rgb(185, 156, 98);
+      margin: 0;
+    }
+    #add {
+      padding-left: 15%;
+      padding-top: 2%;
+      font-family: 'Helvetica Neue', serif;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 40%;
+      color: rgb(96, 94, 94);
+      margin: 0;
+      height: 25px;
+    }
+    #title {
+      padding-bottom: 10px;
+    }
+    #navigator {
+      height: 40px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 10px;
+      overflow: hidden;
+      text-align: center;
+      border-top: solid 1px #CCC;
+      height: 40px;
+      margin: auto;
+    }
+    li {
+      display: inline;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    li a {
+      text-decoration: none;
+      font-family: 'Helvetica Neue', serif;
+      font-weight: normal;
+      font-size: 15px;
+      width: 10%;
+    }
+    li a.black {
+      color: black;
+    }
+    li a.bright {
+      color: rgb(185, 156, 98);
+    }
+
+    #middle {
+      width: 1192px;
+      background-color: white;
+    }
+    #left {
+      float: left;
+      width: 39%;
+      padding-left: 11%;
+      padding-top: 13%;
+    }
+    #right {
+      float: right;
+      width: 39%;
+      padding-right: 8%;
+      padding-top: 5%;
+    }
+    #pic2 {
+       padding-top: 10%;
+     }
+    img.pic1 {
+      width: 95%;
+    }
+    img.pic2 {
+      width: 95%;
+    }
+    #pic3 {
+      padding-top: 20%;
+    }
+    img.pic3 {
+      width: 90%
+    }
+    #pic4 {
+      padding-top: 7%;
+    }
+    img.pic4 {
+      width: 90%
+    }
+    img.pic5 {
+      width: 100%
+    }
+    p.para1 {
+      font-weight: normal;
+      font-family: 'Helvetica Neue', serif;
+      font-size: 10px;
+      color: rgb(96, 94, 94);
+      letter-spacing: 0.2em;
+    }
+    p.para2 {
+      font-family: "Libre Baskerville";
+      font-style: italic;
+      font-size: 35px;
+      color: rgb(185, 156, 98);
+      line-height: 5px;
+      letter-spacing: 0.01em;
+      font-weight: 400;
+    }
+    p.para3 {
+      font-family: 'Helvetica Neue', serif;
+      color: rgb(96, 94, 94);
+      font-size: 15px;
+      line-height: 0.5em;
+    }
+    a.read {
+      color: black;
+      font-family: 'Helvetica Neue', serif;
+      font-size: 15px;
+      text-decoration: none;
+    }
+    a.read:hover, a.para5:hover {
+      color: rgb(225, 225, 224);
+    }
+    #read1 {
+      color: black;
+    }
+    #word2 {
+      padding-top: 58px;
+    }
+    #picandword {
+      width: 78%;
+      text-align: center;
+      overflow: auto;
+      padding: 11%;
+    }
+    #online {
+      z-index: 100;
+      position: absolute;
+      left: 393px;
+      /* left: 33%; */
+      /* width: 33%; */
+      width: 393px;
+      height: 130px;
+      background-color: white;
+      /* margin-top: -32%; */
+      margin-top: -381px;
+    }
+    p.para4 {
+      font-family: 'Helvetica Neue', serif;
+      font-size: 0.2em;
+      color: rgb(95, 94, 108);
+      text-align: center;
+      letter-spacing: 0.1em;
+    }
+    #greens {
+      position: relative;
+      top: 27%;
+    }
+    p.para7 {
+      font-family: 'Helvetica Neue', serif;
+      font-size: 10px;
+      color: rgb(95, 94, 108);
+      text-align: center;
+      letter-spacing: 0.1em;
+      font-weight: normal;
+    }
+    a.para5 {
+      font-family: "Libre Baskerville";
+      color: rgb(95, 94, 108);
+      font-size: 30px;
+      text-decoration: none;
+    }
+    #orderonline {
+      text-align: center;
+      position: relative;
+      top: 30px;
+    }
+    #coconut {
+      margin-top: -8%;
+      width: 100%;
+      padding-bottom: 3%;
+    }
+    p.gogreen {
+      font-family: 'Helvetica Neue', serif;
+      font-size: 10px;
+      text-align: center;
+      color: rgb(95, 94, 108);
+      letter-spacing: 0.2em;
+        }
+    p.para6 {
+      font-family: 'Libre Baskerville', serif;
+      color: rgb(185, 156, 98);
+      font-style: italic;
+      text-align: center;
+      line-height: 5px;
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+    #after {
+      height: 210px;
+      width: 1192px;
+      background-color: rgb(185, 156, 98);
+    }
+    #cr {
+      margin: 0;
+      padding-left: 68%;
+      padding-top: 4%;
+    }
+    p.copyright {
+      color: white;
+      font-family: 'Helvetica Neue', serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1px;
+    }
+    /* #end {
+      height: 35px;
+      width: 100%;
+      background-color: white;
+    } */
+
+
+    </style>
+  </head>
+  <body>
+    <div id="before">
+      <div id="header">
+        <div id="add">
+          <p>332 Keawe Street</p>
+          <p>Hilo, Hawaii 96720</p>
+        </div>
+        <div id="title">
+          <h1>T H Y M E</h1>
+        </div>
+      </div>
+      <div id="navigator">
+        <ul>
+          <li id="home">
+            <a  class="bright" target="_blank" href="page2.html#home">Home</a>
+          </li>
+          <li id="vision">
+            <a  class="black" target="_blank" href="page2.html#our-vision">Our Vision</a>
+          </li>
+          <li id="menu">
+            <a  class="black" target="_blank" href="page2.html#menu">Menu</a>
+          </li>
+          <li id="order">
+            <a  class="black" target="_blank" href="page2.html#order-online">Order Online</a>
+          </li>
+          <li id="contact">
+            <a  class="black" target="_blank" href="page2.html#contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="bgimg1">
+    </div>
+
+    <div id="middle">
+      <div id="left">
+        <div id="pic1">
+          <img class="pic1" src="http://cs-server.usc.edu:45678/hw/hw3/images/image3.jpg" alt="pic1" />
+        </div>
+        <div id="pic2">
+          <img class="pic2" src="http://cs-server.usc.edu:45678/hw/hw3/images/image2.jpg" alt="pic2" />
+        </div>
+        <div id="word2">
+          <div id="freshest">
+            <p class="para2">Freshest Island</p>
+            <p class="para2">food from local vendors</p>
+          </div>
+          <div id="supporting">
+            <p class="para3">Supporting local economy and the</p>
+            <p class="para3">environment. Gluten-free items also</p>
+            <p class="para3">available.</p>
+          </div>
+          <div id="read2">
+            <a class="read" target="_blank" href="page2.html#our-vision">Read More Here ></a>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div id="word1">
+          <div id="restaurant">
+            <p class="para1">OUR RESTAURANT</p>
+          </div>
+          <div id="local">
+            <p class="para2">Local fresh cuisine</p>
+            <p class="para2">for everyone</p>
+          </div>
+          <div id="pineapples">
+            <p class="para3">Pineapples is a family-owned and operated</p>
+            <p class="para3">restaurant, dedicated to providing island fresh</p>
+            <p class="para3">cuisine to the east side of the Big island. Our</p>
+            <p class="para3">restaurant is located in the historic Pineapple</p>
+            <p class="para3">Building, located in the heart of downtown Hilo.</p>
+          </div>
+          <div id="read1">
+            <a class="read" target="_blank" href="page2.html#our-vision">Read More Here ></a>
+          </div>
+        </div>
+        <div id="pic3">
+          <img class="pic3" src="http://cs-server.usc.edu:45678/hw/hw3/images/image1.jpg" alt="pic3" />
+        </div>
+        <div id="pic4">
+          <img class="pic4" src="http://cs-server.usc.edu:45678/hw/hw3/images/image4.jpg" alt="pic4" />
+        </div>
+      </div>
+      <div id="picandword">
+        <div id="pic5">
+          <img class="pic5" src="http://cs-server.usc.edu:45678/hw/hw3/images/image7.jpg" alt="pic5" />
+        </div>
+        <div id="online">
+          <div id="greens">
+            <p class="para7">GREENS JUST GOT FASTER!</P>
+          </div>
+          <div id="orderonline">
+            <a class="para5" target="_blank" href="page2.html#order-online">Order Online</a>
+          </div>
+        </div>
+      </div>
+      <div id="coconut">
+        <p class="gogreen">GoGreenMag.com</p>
+        <p class="para6">"Loved it. We walked in around 6:30 without reservations"</p>
+        <p class="para6">and were seated.</p>
+        <p class="para6">The coconut crusted ono was on special and perfect."</p>
+      </div>
+    </div>
+      <div id="bgimg2">
+    </div>
+  <div id="after">
+      <div id="cr">
+        <p class="copyright">&copy;2017 by Pineapples Hilo Restaurant</p>
+        <p class="copyright">pineappleshilo.com</p>
+      </div>
+   </div>
+    <!-- <div id="end">
+    </div> -->
+  </body>
+</html>
