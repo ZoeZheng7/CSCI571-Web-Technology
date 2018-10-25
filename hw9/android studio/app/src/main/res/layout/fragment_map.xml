@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Map">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/fromAuto"
+            android:text="@string/from" />
+
+        <!--<EditText-->
+            <!--android:id="@+id/from"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/locationHint"/>-->
+
+        <AutoCompleteTextView
+            android:id="@+id/fromAuto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/locationHint"/>
+
+        <TextView
+            android:labelFor="@+id/travelMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/travelMode"/>
+
+        <Spinner
+            android:id="@+id/travelMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/mode">
+
+        </Spinner>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"/>
+
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

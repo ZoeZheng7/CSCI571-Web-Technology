@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Info">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/infoAdd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/infoAdd"/>
+
+            <TextView
+                android:id="@+id/placeAdd"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infoPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/infoPhone"/>
+
+            <TextView
+                android:id="@+id/placePhone"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:autoLink="phone"
+                android:clickable="true"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infoPrice"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/infoPrice"/>
+
+            <TextView
+                android:id="@+id/placePrice"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infoRating"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/infoRating"/>
+
+            <RatingBar
+                android:id="@+id/placeRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-65dp"
+                style="@android:style/Widget.Material.RatingBar"
+                android:numStars="5"
+                android:isIndicator="true"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:layout_gravity="start"
+                android:stepSize="0.1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infoGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/infoGooglePage"/>
+
+            <TextView
+                android:id="@+id/placeGoogle"
+                android:autoLink="web"
+                android:clickable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/infoWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/infoWebsite"/>
+
+            <TextView
+                android:id="@+id/placeWebsite"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:autoLink="web"
+                android:clickable="true"
+                android:gravity="center_vertical" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

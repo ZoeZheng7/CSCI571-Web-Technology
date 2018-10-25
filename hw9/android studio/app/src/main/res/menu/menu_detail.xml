@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.csci571.hw9.hw9.detail">
+    <item
+        android:id="@+id/share"
+        android:title="share"
+        android:orderInCategory="100"
+        android:icon="@drawable/share"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/favor"
+        android:title="favor"
+        android:orderInCategory="100"
+        android:icon="@drawable/heart_fill_white"
+        app:showAsAction="always" />
+</menu>

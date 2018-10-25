@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlaceDetail">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:text="INFO"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                android:id="@+id/info"
+                android:gravity="center"
+                android:drawableLeft="@drawable/info"
+                android:padding="20dp"
+                />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:text="PHOTOS"
+                android:id="@+id/photos"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:text="MAP"
+                android:id="@+id/map"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+
+                android:text="REVIEWS"
+                android:id="@+id/reviews"
+                android:gravity="center"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <!--<android.support.v4.view.PagerTabStrip-->
+            <!--android:id="@+id/pagerTab"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="top"-->
+            <!--android:background="@color/colorPrimary"/>-->
+
+    </android.support.v4.view.ViewPager>
+
+        <TextView
+            android:id="@+id/detailTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
